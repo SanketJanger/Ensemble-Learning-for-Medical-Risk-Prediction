@@ -38,7 +38,7 @@ Final prediction:
 
 > Replace the filename below with your actual uploaded architecture image name.
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](Model_Architecture.png)
 
 
 🔁 Pipeline Flow
