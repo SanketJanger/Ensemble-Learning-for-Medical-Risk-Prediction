@@ -1,0 +1,27 @@
+# venv / caches
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.gradio/
+.cache/
+
+# OS / temp
+.DS_Store
+Thumbs.db
+.~lock.*
+
+# big downloads you probably don't want
+physionet.org/
+wget.exe
+
+# ignore model binaries (keep repo light)
+*.pkl
+*.joblib
+*.h5
+*.keras
+*.pt
+*.pth
+*.onnx
+*.tflite
+
+
