@@ -10,11 +10,11 @@ __pycache__/
 Thumbs.db
 .~lock.*
 
-# big downloads you probably don't want
+# big downloads (Dataset)
 physionet.org/
 wget.exe
 
-# ignore model binaries (keep repo light)
+# ignore model binaries
 *.pkl
 *.joblib
 *.h5
