@@ -36,8 +36,6 @@ Final prediction:
 
 ### Architecture Diagram
 
-> Replace the filename below with your actual uploaded architecture image name.
-
 ![Architecture Diagram](Model_Architecture.png)
 
 
