@@ -1,0 +1,8 @@
+gradio
+numpy
+pandas
+joblib
+pillow
+tensorflow==2.16.*
+xgboost
+scikit-learn

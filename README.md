@@ -34,6 +34,43 @@ The system integrates chest X-ray image features with structured clinical inputs
 Final prediction:
 0.6 x CNN Probability + 0.4 x XGBoost Probability
 
+### Architecture Diagram
+
+> Replace the filename below with your actual uploaded architecture image name.
+
+```markdown
+![Architecture Diagram](architecture.png)
+
+```
+
+🔁 Pipeline Flow
+
+## 1️⃣ Image Processing Branch
+
+- Resize to 224×224
+- MobileNetV2 preprocessing
+- MobileNet CNN inference
+- Output: Image Probability (p_img)
+
+## 2️⃣ Tabular Processing Branch
+
+- Encode gender using LabelEncoder
+- Construct features (age, gender)
+- XGBoost inference
+- Output: Tabular Probability (p_tab)	​
+
+## 4️⃣ Decision Threshold
+
+- If p_final ≥ 0.5 → PNEUMONIA
+- Else → NO PNEUMONIA
+
+## 5️⃣ Output
+
+Returns structured JSON containing:
+- Image model probability
+- Tabular model probability
+- Final probability
+- Predicted label
 
 ---
 
@@ -65,18 +102,42 @@ python gradio_app.py
 - Gradio
 - Pandas,  NumPy
 
+## ▶️ How to Run the Project
 
-## Requirements:
+Follow the steps below to run the application locally.
 
-gradio
-numpy
-pandas
-joblib
-pillow
-tensorflow==2.16.*
-xgboost
-scikit-learn
+### 1️⃣ Clone the Repository
 
+```bash
+git clone https://github.com/SanketJanger/Ensemble-Learning-for-Medical-Risk-Prediction.git
+cd Ensemble-Learning-for-Medical-Risk-Prediction
+```
+
+## 2️⃣ Create and Activate a Virtual Environment
+1. On Mac or Linux: 
+```
+python3 -m venv .venv
+source .venv/bin/activate
+```
+2. If using Windows:
+```
+.venv\Scripts\activate
+```
+
+## 3️⃣ Install Dependencies
+```
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## 4️⃣ Run the Gradio Application
+```
+python gradio_app.py
+```
+
+## 5️⃣ Open in Browser
+After running the script, open the URL printed in your terminal
+Typically : "http://127.0.0.1:7860"
 
 ## Author:
-## SANKET JANGER
+# SANKET JANGER
